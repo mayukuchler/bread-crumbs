@@ -1,0 +1,460 @@
+* {
+    -moz-box-sizing: border-box; /* Firexfox */
+    -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+    box-sizing: border-box; /* IE */
+    font-family: 'Roboto Mono', monospace;
+    margin: 0 auto;
+  }
+  
+  html{
+    font-size: 11px;
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+  }
+  
+  body{
+    background: #555;
+    /* background: #f7f3f0; */
+    height: 100%;
+    width: 100%;
+  }
+  /* -----HEADER------- */
+  header{
+    background: #f5f5f5;
+    height: 35px;
+    padding: 10px;
+    border-bottom: 2px solid #555;
+  }
+  
+  h1 {
+    font-size: 11px;
+    color: #555;
+  }
+  
+  span a{
+    text-decoration: none;
+    color: #555;
+    float: right;
+    margin-top: -14px;
+  }
+  
+  /* -----HEADER END------- */
+  
+  .hero{
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* ----MAP STYLES------- */
+  .map{
+    height: 543px;
+    width: 80.05%;
+    float: left;
+    margin: 0px 0 0 1px;
+    border-left: 2px solid #555;
+  }
+  
+  #map {
+    height: 100%;
+    width: 100%;
+    /* z-index: 0; */
+  }
+  
+  /*----MAP STYLES END  */
+  /*---ADD A MEMORY COMPONENT-----  */
+  
+  .tasksContainer{
+    float: left;
+    width: 244px;
+    border: 2px solid #555;
+    border-top: 1px solid #555;
+    /* margin: 1px 2px; */
+  }
+  
+  .subHeader{
+    height: 34px;
+    width: 101%;
+    border-bottom: 1px solid #555;
+    background: #f5f5f5;
+    float: right;
+    margin: -1px -1px 0 0px;
+  }
+  
+  ul{
+    margin-left: -40px;
+    height: 35px;
+    border-right: 1px solid #555;
+  }
+  
+  .subHeader li{
+    float: left;
+    /* border-right: 1px solid #555; */
+    padding: 10px;
+    list-style: none;
+  }
+  
+  .two{
+    border-right: 1px solid #555;
+    width: 35%;
+  }
+  .three{
+    width: 56%;
+    text-align: center;
+  }
+  
+  .taskPane{
+    height: 439px;
+    width: 100%;
+    background: #f5f5f5;
+    clear: left;
+    margin-top: 34px;
+  }
+  
+  .innerTaskPane{
+    height: 418px;
+    width: 90%;
+    float: left;
+    margin: 10px 11px;
+    margin-bottom: -24px;
+    padding: 5px;
+  }
+  
+  .newTask{
+    margin: 35px;
+  }
+  
+  .allTasks{
+    margin: 71px -121px 12px 0;
+    float: left;
+  }
+  
+  .newTask h2, .allTasks h2{
+    font-size: 1rem;
+    float: left;
+    margin-left: 5px;
+  }
+  
+  .buttonAllTasks{
+    width: 20px;
+    height: 35px;
+    float: left;
+    background-color: #f5f5f5;
+    border: .5px solid #555;
+    margin: -11px -11px -11px -10px;
+  }
+  
+  .buttonAllTasks:hover, .buttonAddTask:hover {
+    background: #d9eefa;
+   }
+  
+  .buttonAddTask{
+    width: 100%;
+    height: 25px;
+    float: left;
+    background-color: #f5f5f5;
+    border: .5px solid #555;
+    margin-top: 10px;
+  }
+  
+  .buttonAddTask, .buttonAllTasks:focus {
+    outline:0;
+    padding: 1px;
+  }
+  
+  .buttonSection{
+    margin-top: 14px;
+  }
+  
+  .buttonSection span{
+    margin-top: 9px;
+    float: left;
+  }
+  
+  /* add memory form */
+  
+  .demo-form{
+      background-color: #f5f5f5;
+      margin: 0 auto;
+      display: block;
+      border-radius: 2px;
+  }
+  
+  .demo-form legend{
+      text-align: center;
+      color: #565656;
+      /* font-size: 20px; */
+      display: inline-block;
+      width: 100%;
+  }
+  
+  .demo-form fieldset{
+      border: none;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .demo-form input{
+      width: 100%;
+    border: none;
+      border-bottom: .5px solid #555;
+      height: 50px;
+    margin: 5px 0;
+      display: block;
+    background: #f5f5f5;
+    font-size: 11.5px;
+  }
+  .demo-form input:focus{
+    outline: 0px;
+  }
+  
+  #fileInput{
+    width: 100%;
+    height: 20px;
+    float: left;
+    background-color: #f5f5f5;
+    border: 0 solid #555;
+    margin-top: 19px;
+  }
+  /* end form */
+  
+  .notes{
+    width: 100%;
+    height: 67px;
+    float: left;
+    background: #f5f5f5;
+    margin-top: 2px;
+    padding: 5px;
+  }
+  
+  .notes span{
+    text-align: center;
+    color: #35a8fc;
+    display: block;
+    margin: 20px auto;
+    font-size: 13px;
+  }
+  
+  /*------MEMORY PANE------  */
+  .memoryPane, .innerMemoryPane{
+    display: none;
+  }
+  
+  /* table */
+  #memLocation {
+    list-style: none;
+    height: 30px;
+    padding: 8px;
+    margin: 0;
+    width: 100%;
+  }
+  
+  #memLocation td{
+    padding-right: 10px;
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .title{
+    width: 150px;
+    border-left: 2px solid #555;
+  }
+  
+  .date{
+    width: 100px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .time{
+    width: 100px;
+    border-right: 1px solid #ddd;
+  
+  }
+  
+  .location{
+    width: 150px;
+    border-right: 1px solid #ddd;
+  
+  }
+  
+  .description{
+    max-width: 200px;
+    border-right: 1px solid #ddd;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  /* toggled view */
+  
+  .memoryPaneView {
+    height: 543px;
+    width: 80.05%;
+    float: left;
+    overflow: scroll;
+    margin: 0px 0 0 1px;
+    background-color: #f5f5f5;
+  }
+  
+  .closePane{
+    height: 10px;
+    width: 17px;
+    border: 1px solid #555;
+    border-top: 2px solid #555;
+    padding: 5px;
+  }
+  
+  .hidden{
+    display: none;
+  }
+  /* Toggled view end */
+  
+  /* TABS */
+  main {
+    min-width: 320px;
+    background: #f5f5f5;
+  }
+  
+  main section {
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+  }
+  
+  main input {
+    display: none;
+  }
+  
+  main label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 8px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    border: 1px solid transparent;
+  }
+  
+  label:before {
+    font-weight: normal;
+    margin-right: 10px;
+  }
+  
+  label[for*='1']:before { content: '\f1cb'; }
+  label[for*='2']:before { content: '\f17d'; }
+  label[for*='3']:before { content: '\f16b'; }
+  label[for*='4']:before { content: '\f1a9'; }
+  
+  label:hover {
+    color: #888;
+    cursor: pointer;
+  }
+  
+  input:checked + label {
+    color: #555;
+    border: 1px solid #ddd;
+    border-top: 4px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+  }
+  
+  #tab1:checked ~ #content1,
+  #tab2:checked ~ #content2,
+  #tab3:checked ~ #content3,
+  #tab4:checked ~ #content4 {
+    display: block;
+    padding: 8px;
+  }
+  
+  #tab2:checked ~ #content2{
+    padding: 15px 0 0 41px;
+  }
+  
+  #content2 li{
+    margin-top: 10px;
+  }
+  
+  td:hover{
+    background-color: #d9eefa;
+  }
+  
+  
+  /* TABS END */
+  
+  .editMem, .saveMem {
+    margin: 20px 5px 0 0;
+    background: #f5f5f5;
+    border: 1px solid #555;
+  }
+  
+  .fileLi img{
+    width: 300px;
+    border: 1px solid #555;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  
+  .titleLi, .timeLi, .dateLi, .descriptionLi, .locationLi, .fileLi{
+    list-style: none;
+  }
+  
+  .imageCarousel{
+    clear: both;
+    height: 100px;
+    width: 100%;
+    background: #f5f5f5;
+  }
+  
+  @media screen and (min-width: 1900px){
+  
+    html{
+    }
+  
+    .map{
+      height: 86%;
+      width: 80.05%;
+      margin: 0px 0 2px 1px;
+      border-left: 2px solid #555;
+    }
+  
+    .tasksContainer{
+      float: left;
+      width: 19.8%;
+      height: 86%;
+      border: 2px solid #555;
+      border-top: 1px solid #555;
+    }
+  
+    .taskPane{
+      height: 87.8%;
+    }
+  
+    .one{
+      border-left: 1px solid #555;
+    }
+  
+    .two{
+      text-align: center;
+    }
+  
+  .demo-form input{
+      height: 94px;
+      margin: 12px 0;
+      display: block;
+      background: #f5f5f5;
+      font-size: 14.5px;
+    }
+  
+    .memoryPaneView{
+      height: 86%;
+      width: 80.05%;
+      float: left;
+      overflow: scroll;
+      margin: 0px 0 2px 1px;
+      background-color: #f5f5f5;
+    }
+  
+    /* .imageCarousel{
+  
+    } */
+  }
+  
