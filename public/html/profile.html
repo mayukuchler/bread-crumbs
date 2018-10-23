@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Memories</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+  <script type="text/javascript" src="js/main.js" defer></script>
+</head>
+  <body>
+    <header> <h1>---</h1>
+    <span> <a href="/logout">Logout</a></span>
+    </header>
+
+    <section class="hero">
+
+      <!-- MAP -->
+      <section class="map" id="mapContainer">
+        <section id="map">
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiZak0qOeEp0FJC_zAH17SX_CyGzR2TXM&callback=initMap" async defer></script>
+        </section>
+      </section>
+      <!-- MAP END -->
+
+      <!--    MEMORY PANE - DASHBOARD VIEW   -->
+      <section class="memoryPane" id="memoryPane">
+        <section class="innerMemoryPane" id="innerMemoryPane">
+          <main>
+            <input id="tab1" type="radio" name="tabs" checked>
+            <label for="tab1">All Memories</label>
+
+            <input id="tab2" type="radio" name="tabs">
+            <label for="tab2">Memory</label>
+
+            <section id="content1">
+              <table id="memLocation"></table>
+            </section>
+
+            <section id="content2"></section>
+          </main>
+        </section>
+      </section>
+      <!--  MEMORY PANE - DASHBOARD VIEW END  -->
+
+      <section class="tasksContainer" id="tasksContainer">
+        <section class="subHeader">
+          <ul>
+            <li class="one"><button class="buttonAllTasks" id="buttonAllTasks" type="button" name="button"><</button></li>
+            <li class="two" id="currentDate"></li>
+            <li class="three" id="memoryCount"></li>
+          </ul>
+        </section>
+        <section class="taskPane" id="taskPane">
+          <section class="innerTaskPane" id="innerTaskPane">
+            <form class="demo-form" id="newMemForm" role="form" action="/signup" accept-charset="UTF-8" method="post">
+              <fieldset>
+                <legend>Add a memory</legend>
+                <input placeholder="name your memory..." type="text" name='name' id="title"/>
+                <input placeholder="mm/dd/yyyy" type="text" name="date" id="date"/>
+                <input placeholder="time..." type="text" name="time" id="time"/>
+                <input placeholder="boston, ma" type="text" name="location" id="location"/>
+                <input placeholder="description..." type="text" name="description" id="description"/>
+                <input type="file" id="fileInput" class"fileInput">
+
+                <section class="buttonSection">
+                  <button class="buttonAddTask" id="buttonAddTask" type="button" name="button">+</button>
+                </section>
+              </fieldset>
+            </form>
+          </section>
+        </section>
+        <section class="notes">
+          <span id="msg"></span>
+        </section>
+      </section>
+      <section class="imageCarousel"></section>
+  </body>
+  </html>
